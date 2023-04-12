@@ -1,9 +1,7 @@
 import styledcomponents from 'styled-components';
 
 const Container = styledcomponents.section`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${({ theme }) => theme.container};
     font-size: 3.5rem;
     padding: 0 1em;
 `

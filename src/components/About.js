@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
-
 import { theme } from '../style/theme';
 import { slideUp } from '../utils/slideUp';
+import useScrollPosition from '../hooks/useScrollPosition';
 
 import styledComponents from "styled-components";
 
@@ -9,18 +8,13 @@ import Image from '../assets/KakaoTalk_20220419_205002265.jpg';
 
 const Container = styledComponents.section`
     background-color: ${({ theme }) => theme.text};
+    ${({ theme }) => theme.section}
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 `
 
 const SubTitle = styledComponents.h2`
-    font-size: 3.2rem;
-    text-align: center;
+    ${({ theme }) => theme.title};
     color: #fff;
-    margin-bottom: 1.5em;
     animation: ${({ isShow }) => isShow ? slideUp : undefined} 1000ms 500ms ease-out both;
 `
 
@@ -58,28 +52,13 @@ const ResumeButton = styledComponents.a`
 `
 
 export const About = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const [isShow, setIsShow] = useState(false);
-
-    const updateScroll = () => {
-        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    }
-
-    useEffect(()=>{
-        window.addEventListener('scroll', updateScroll);
-    }, []);
-
-    useEffect(() => {
-        if (scrollPosition > 200) {
-            setIsShow(true);
-        }
-    }, [scrollPosition])
+    const isShow = useScrollPosition(200, false);
 
     return (
         <Container theme={theme}>
             {isShow && 
             <>
-                <SubTitle isShow={isShow}>About Me</SubTitle>
+                <SubTitle theme={theme} isShow={isShow}>About Me</SubTitle>
                 <Profile isShow={isShow}>
                     <ProfileImage image={Image}></ProfileImage>
                     <Description>
