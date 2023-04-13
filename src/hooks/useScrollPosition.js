@@ -6,7 +6,7 @@ const useScrollPosition = (scroll, initialState) => {
 
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    }
+    };
 
     useEffect(()=>{
         window.addEventListener('scroll', updateScroll);
@@ -16,9 +16,9 @@ const useScrollPosition = (scroll, initialState) => {
         if (scrollPosition > scroll) {
             setIsShow(true);
         }
-    }, [scrollPosition, scroll])
+    }, [scrollPosition, scroll]);
 
-    return isShow
-}
+    return isShow;
+};
 
-export default useScrollPosition
+export default useScrollPosition;

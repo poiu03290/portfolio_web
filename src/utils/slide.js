@@ -12,3 +12,16 @@ export const slideUp = keyframes`
         display: block;
     }
 `;
+
+export const slideRight = keyframes`
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+        display: none;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+        display: block;
+    }
+`;

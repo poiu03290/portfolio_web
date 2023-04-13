@@ -3,8 +3,10 @@ import styledComponents from "styled-components";
 import { Header } from "../components/Header"
 import { About } from "../components/About";
 import { Projects } from "../components/Projects";
+import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
 
-const Cantainer = styledComponents.section`
+const Container = styledComponents.section`
     max-width: 100vw; 
     height: 100vh;
     font-family: 'Kanit', sans-serif;
@@ -12,10 +14,12 @@ const Cantainer = styledComponents.section`
 
 export const Main = () => {
     return (
-        <Cantainer>
+        <Container>
             <Header />
             <About />
             <Projects />
-        </Cantainer>
+            <Contact />
+            <Footer />
+        </Container>
     )
 }

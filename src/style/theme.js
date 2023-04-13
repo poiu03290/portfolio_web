@@ -11,9 +11,18 @@ const title = {
     'margin-bottom': '1.5em',
 }
 
+const button = {
+    'display': 'inline-block',
+    'font-size': '1.25rem',
+    'background-color': 'inherit',
+    'cursor': 'pointer',
+}
+
 export const theme = {
-    background: '#DFFFD8',
-    text: '#41b883',
+    background: '#69d085',
+    MediumText: '#43c466',
+    lightText: '#c1ebcd',
     title,
-    section
+    section,
+    button
 }

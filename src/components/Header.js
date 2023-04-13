@@ -1,4 +1,4 @@
-import { slideUp } from "../utils/slideUp";
+import { slideUp } from "../utils/slide";
 
 import { theme } from '../style/theme';
 
@@ -20,7 +20,7 @@ const Title = styledComponents.h1`
 `
 
 const FontColor = styledComponents.span`
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.MediumText};
 `
 
 export const Header = () => {
