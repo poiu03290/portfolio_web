@@ -81,7 +81,7 @@ export const About = () => {
                         <br />
                         👇 아래 버튼을 통해 이력서를 확인할 수 있습니다.
                         <br />
-                        <Link to={'https://drive.google.com/file/d/16rzKx5C4LwhEgenSKF53tS2MWl7-G6T8/view?usp=sharing'} target='blank'>
+                        <Link to={'https://drive.google.com/file/d/1l1WauFi5II4MDs7DCSuWTZoiJw6BmtRz/view?usp=sharing'} target='blank'>
                             <ResumeButton theme={theme}>Resume</ResumeButton>
                         </Link>
                     </Description>
